@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MovieDetail tests suite should render without crashing 1`] = `
+<DocumentFragment>
+  <span>
+    Page Détail
+  </span>
+  <span />
+  <span />
+  <span />
+  <span />
+  <span />
+</DocumentFragment>
+`;
