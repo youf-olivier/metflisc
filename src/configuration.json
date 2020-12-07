@@ -1,0 +1,10 @@
+{
+  "tmdbUrl": "https://api.themoviedb.org/3",
+  "v3APIKey": "132e748598b28ef3f51cfbb17cbeb587",
+  "V4BearerToken": "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxMzJlNzQ4NTk4YjI4ZWYzZjUxY2ZiYjE3Y2JlYjU4NyIsInN1YiI6IjVmY2NjNjJjNzMxNGExMDA0MWNjYzJkYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.rC-dVYXV4uddUXS6N6ULF8oviE16oqf0ganH_coMv30",
+  "api": {
+    "popularEnpoint": "movie/popular",
+    "searchEnpoint": "search/movie",
+    "getEnpoint": "movie/"
+  }
+}

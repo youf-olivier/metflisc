@@ -3,7 +3,7 @@
 exports[`MoviesList tests suite should render without crashing 1`] = `
 <DocumentFragment>
   <span>
-    Page Détail
+    Pending...
   </span>
 </DocumentFragment>
 `;

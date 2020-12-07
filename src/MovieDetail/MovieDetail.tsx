@@ -1,12 +1,7 @@
+import { MovieType } from 'Movie.types';
 import { FC } from 'react';
 
-type MovieDetailProps = {
-  title: string;
-  overview: string;
-  popularity: number;
-  posterPath: string;
-  releaseDate: Date;
-};
+type MovieDetailProps = MovieType;
 
 const MovieDetail: FC<MovieDetailProps> = ({
   title,
