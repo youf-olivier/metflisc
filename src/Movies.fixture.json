@@ -225,5 +225,45 @@
     ],
     "total_pages": 500,
     "total_results": 10000
+  },
+  "moviesSearchResult": {
+    "page": 1,
+    "results": [
+      {
+        "id": 654028,
+        "original_title": "The Christmas Chronicles: Part Two",
+        "overview": "Kate Pierce is reluctantly spending Christmas with her mom’s new boyfriend and his son Jack. But when the North Pole and Christmas are threatened to be destroyed, Kate and Jack are unexpectedly pulled into a new adventure with Santa Claus.",
+        "popularity": 859.391,
+        "poster_path": "/6sG0kbEvAi3RRLcGGU5h8l3qAPa.jpg",
+        "release_date": "2020-11-18",
+        "title": "The Christmas Chronicles: Part Two",
+        "vote_average": 7.2,
+        "vote_count": 211
+      },
+      {
+        "id": 682377,
+        "original_title": "Chick Fight",
+        "overview": "When Anna Wyncomb is introduced to an an underground, all-female fight club in order to turn the mess of her life around, she discovers she is much more personally connected to the history of the club than she could ever imagine.",
+        "popularity": 841.376,
+        "poster_path": "/4ZocdxnOO6q2UbdKye2wgofLFhB.jpg",
+        "release_date": "2020-11-13",
+        "title": "Chick Fight",
+        "vote_average": 5.8,
+        "vote_count": 49
+      },
+      {
+        "id": 581392,
+        "original_title": "반도",
+        "overview": "A soldier and his team battle hordes of post-apocalyptic zombies in the wastelands of the Korean Peninsula.",
+        "popularity": 832.405,
+        "poster_path": "/sy6DvAu72kjoseZEjocnm2ZZ09i.jpg",
+        "release_date": "2020-07-15",
+        "title": "Peninsula",
+        "vote_average": 6.9,
+        "vote_count": 871
+      }
+    ],
+    "total_pages": 500,
+    "total_results": 10000
   }
 }

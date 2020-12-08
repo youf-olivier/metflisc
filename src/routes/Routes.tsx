@@ -1,4 +1,4 @@
-import { BrowserRouter, Route } from 'react-router-dom';
+import { MemoryRouter, Route } from 'react-router-dom';
 import Header from 'shared/components/Header';
 
 import routes, { RouteType } from './Routes.constants';
@@ -23,13 +23,13 @@ const GenericLayout = ({ route }: GenericLayoutProps) => (
 
 const Routes = () => {
   return (
-    <BrowserRouter>
+    <MemoryRouter>
       {routes.map(route => (
         <Route key={route.name} exact path={route.path}>
           <GenericLayout route={route} />
         </Route>
       ))}
-    </BrowserRouter>
+    </MemoryRouter>
   );
 };
 

@@ -27,6 +27,12 @@ const server = setupServer(
     },
   ),
   rest.get(
+    `${configuration.tmdbUrl}/${configuration.api.searchEnpoint}*`,
+    (req, res, ctx) => {
+      return res(ctx.json(fixture.moviesSearchResult));
+    },
+  ),
+  rest.get(
     `${configuration.tmdbUrl}/${configuration.api.popularEnpoint}`,
     (req, res, ctx) => {
       return res(ctx.json(fixture.moviesList));

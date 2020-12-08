@@ -16,6 +16,7 @@ const StyledDiv = styled.div`
   background-color: ${props => props.theme.colors.header};
   text-align: center;
   position: relative;
+  margin-bottom: 0.5em;
 `;
 
 const CustomBackLink = styled(Link)`
@@ -39,7 +40,7 @@ const Header: FC<HeaderType> = ({ children }) => {
   return (
     <StyledDiv>
       {!isHome && (
-        <CustomBackLink to="/">
+        <CustomBackLink to="/" aria-label="back link">
           <i className="material-icons">arrow_back_ios_new</i>
         </CustomBackLink>
       )}
