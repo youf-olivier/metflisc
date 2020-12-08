@@ -5,4 +5,5 @@ export type MovieType = {
   popularity: number;
   posterPath: string;
   releaseDate: Date;
+  poster_path: string;
 };

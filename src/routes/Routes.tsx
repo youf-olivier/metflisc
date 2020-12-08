@@ -1,4 +1,5 @@
 import { BrowserRouter, Route } from 'react-router-dom';
+import Header from 'shared/components/Header';
 
 import routes, { RouteType } from './Routes.constants';
 
@@ -6,9 +7,12 @@ type GenericLayoutProps = {
   route: RouteType;
 };
 
+export const getRoutePath = (name: string) =>
+  routes.find(p => p.name === name)?.path || '/';
+
 const GenericLayout = ({ route }: GenericLayoutProps) => (
   <>
-    <h1>{route.title}</h1>
+    <Header>{route.title}</Header>
     <route.component />
   </>
 );

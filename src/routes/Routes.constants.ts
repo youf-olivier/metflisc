@@ -13,7 +13,7 @@ const routes: RouteType[] = [
     name: 'Home',
     path: '/',
     component: MoviesList,
-    title: 'Liste des films',
+    title: 'Movies',
   },
   {
     name: 'MovieDetail',

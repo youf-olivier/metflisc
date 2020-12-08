@@ -1,4 +1,4 @@
-import { MovieType } from 'Movie.types';
+import { MovieType } from 'Movie.type';
 import { FC } from 'react';
 
 type MovieDetailProps = MovieType;

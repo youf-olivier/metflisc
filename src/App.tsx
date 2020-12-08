@@ -1,7 +1,12 @@
 import Routes from 'routes';
+import ThemeProvider from 'shared/components/ThemeProvider';
 
-function App() {
-  return <Routes />;
-}
+const App = () => {
+  return (
+    <ThemeProvider>
+      <Routes />
+    </ThemeProvider>
+  );
+};
 
 export default App;

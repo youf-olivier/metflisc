@@ -1,0 +1,406 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App tests suite Should render without crashing 1`] = `
+<DocumentFragment>
+  .c3 {
+  color: #ffffff;
+  vertical-align: middle;
+}
+
+.c2 {
+  display: inline-block;
+  position: absolute;
+  right: 0.5em;
+  top: 50%;
+  -webkit-transform: translate(0,-50%);
+  -ms-transform: translate(0,-50%);
+  transform: translate(0,-50%);
+}
+
+.c1 {
+  color: #fff;
+  font-size: 1.4em;
+  font-weight: 500;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  text-align: center;
+  display: inline-block;
+}
+
+.c0 {
+  background-color: #60A5FA;
+  text-align: center;
+  position: relative;
+}
+
+@media (min-width:768px) {
+
+}
+
+@media (min-width:768px) {
+
+}
+
+@media (min-width:1024px) {
+
+}
+
+<div
+    class="c0"
+  >
+    <h1
+      class="c1"
+    >
+      Movies
+    </h1>
+    <div
+      class="c2"
+    >
+      <i
+        class="c3 material-icons"
+      >
+        wb_sunny
+      </i>
+      <span
+        class="MuiSwitch-root material-icons MuiSwitch-sizeSmall"
+      >
+        <span
+          aria-disabled="false"
+          class="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiSwitch-switchBase PrivateSwitchBase-checked-2 Mui-checked"
+        >
+          <span
+            class="MuiIconButton-label"
+          >
+            <input
+              checked=""
+              class="PrivateSwitchBase-input-4 MuiSwitch-input"
+              type="checkbox"
+              value=""
+            />
+            <span
+              class="MuiSwitch-thumb"
+            />
+          </span>
+          <span
+            class="MuiTouchRipple-root"
+          />
+        </span>
+        <span
+          class="MuiSwitch-track"
+        />
+      </span>
+      <i
+        class="c3 material-icons"
+      >
+        brightness_3
+      </i>
+    </div>
+  </div>
+  .c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0.2em;
+}
+
+.c1 {
+  display: contents;
+}
+
+.c2 {
+  width: 48%;
+  margin: 0.1em;
+}
+
+@media (min-width:768px) {
+  .c0 {
+    max-width: 950px;
+    margin: auto;
+  }
+}
+
+@media (min-width:768px) {
+  .c2 {
+    width: 24%;
+  }
+}
+
+@media (min-width:1024px) {
+  .c2 {
+    width: 18%;
+  }
+}
+
+<div
+    class="c0"
+    role="list"
+  >
+    <a
+      aria-label="Jiu Jitsu"
+      class="c1"
+      href="/detail"
+      role="listitem"
+    >
+      <img
+        alt="Jiu Jitsu"
+        aria-label="Jiu Jitsu"
+        class="c2"
+        src="https://image.tmdb.org/t/p/w200///eLT8Cu357VOwBVTitkmlDEg32Fs.jpg"
+      />
+    </a>
+    <a
+      aria-label="Upside-Down Magic"
+      class="c1"
+      href="/detail"
+      role="listitem"
+    >
+      <img
+        alt="Upside-Down Magic"
+        aria-label="Upside-Down Magic"
+        class="c2"
+        src="https://image.tmdb.org/t/p/w200///xfYMQNApIIh8KhpNVtG1XRz0ZAp.jpg"
+      />
+    </a>
+    <a
+      aria-label="Tenet"
+      class="c1"
+      href="/detail"
+      role="listitem"
+    >
+      <img
+        alt="Tenet"
+        aria-label="Tenet"
+        class="c2"
+        src="https://image.tmdb.org/t/p/w200///k68nPLbIST6NP96JmTxmZijEvCA.jpg"
+      />
+    </a>
+    <a
+      aria-label="Fatman"
+      class="c1"
+      href="/detail"
+      role="listitem"
+    >
+      <img
+        alt="Fatman"
+        aria-label="Fatman"
+        class="c2"
+        src="https://image.tmdb.org/t/p/w200///4n8QNNdk4BOX9Dslfbz5Dy6j1HK.jpg"
+      />
+    </a>
+    <a
+      aria-label="The Dalton Gang"
+      class="c1"
+      href="/detail"
+      role="listitem"
+    >
+      <img
+        alt="The Dalton Gang"
+        aria-label="The Dalton Gang"
+        class="c2"
+        src="https://image.tmdb.org/t/p/w200///6OeGqp18oZucUGziMIRNhLouZ75.jpg"
+      />
+    </a>
+    <a
+      aria-label="Joker"
+      class="c1"
+      href="/detail"
+      role="listitem"
+    >
+      <img
+        alt="Joker"
+        aria-label="Joker"
+        class="c2"
+        src="https://image.tmdb.org/t/p/w200///udDclJoHjfjb8Ekgsd4FDteOkCU.jpg"
+      />
+    </a>
+    <a
+      aria-label="Magic Camp"
+      class="c1"
+      href="/detail"
+      role="listitem"
+    >
+      <img
+        alt="Magic Camp"
+        aria-label="Magic Camp"
+        class="c2"
+        src="https://image.tmdb.org/t/p/w200///awcPLFFYjufRXd2oAAP6ZIXF9vM.jpg"
+      />
+    </a>
+    <a
+      aria-label="Greenland"
+      class="c1"
+      href="/detail"
+      role="listitem"
+    >
+      <img
+        alt="Greenland"
+        aria-label="Greenland"
+        class="c2"
+        src="https://image.tmdb.org/t/p/w200///bNo2mcvSwIvnx8K6y1euAc1TLVq.jpg"
+      />
+    </a>
+    <a
+      aria-label="Mulan"
+      class="c1"
+      href="/detail"
+      role="listitem"
+    >
+      <img
+        alt="Mulan"
+        aria-label="Mulan"
+        class="c2"
+        src="https://image.tmdb.org/t/p/w200///aKx1ARwG55zZ0GpRvU2WrGrCG9o.jpg"
+      />
+    </a>
+    <a
+      aria-label="Hard Kill"
+      class="c1"
+      href="/detail"
+      role="listitem"
+    >
+      <img
+        alt="Hard Kill"
+        aria-label="Hard Kill"
+        class="c2"
+        src="https://image.tmdb.org/t/p/w200///ugZW8ocsrfgI95pnQ7wrmKDxIe.jpg"
+      />
+    </a>
+    <a
+      aria-label="The Christmas Chronicles: Part Two"
+      class="c1"
+      href="/detail"
+      role="listitem"
+    >
+      <img
+        alt="The Christmas Chronicles: Part Two"
+        aria-label="The Christmas Chronicles: Part Two"
+        class="c2"
+        src="https://image.tmdb.org/t/p/w200///6sG0kbEvAi3RRLcGGU5h8l3qAPa.jpg"
+      />
+    </a>
+    <a
+      aria-label="Chick Fight"
+      class="c1"
+      href="/detail"
+      role="listitem"
+    >
+      <img
+        alt="Chick Fight"
+        aria-label="Chick Fight"
+        class="c2"
+        src="https://image.tmdb.org/t/p/w200///4ZocdxnOO6q2UbdKye2wgofLFhB.jpg"
+      />
+    </a>
+    <a
+      aria-label="Peninsula"
+      class="c1"
+      href="/detail"
+      role="listitem"
+    >
+      <img
+        alt="Peninsula"
+        aria-label="Peninsula"
+        class="c2"
+        src="https://image.tmdb.org/t/p/w200///sy6DvAu72kjoseZEjocnm2ZZ09i.jpg"
+      />
+    </a>
+    <a
+      aria-label="Roald Dahl's The Witches"
+      class="c1"
+      href="/detail"
+      role="listitem"
+    >
+      <img
+        alt="Roald Dahl's The Witches"
+        aria-label="Roald Dahl's The Witches"
+        class="c2"
+        src="https://image.tmdb.org/t/p/w200///betExZlgK0l7CZ9CsCBVcwO1OjL.jpg"
+      />
+    </a>
+    <a
+      aria-label="Rogue City"
+      class="c1"
+      href="/detail"
+      role="listitem"
+    >
+      <img
+        alt="Rogue City"
+        aria-label="Rogue City"
+        class="c2"
+        src="https://image.tmdb.org/t/p/w200///9HT9982bzgN5on1sLRmc1GMn6ZC.jpg"
+      />
+    </a>
+    <a
+      aria-label="Rogue Warfare: Death of a Nation"
+      class="c1"
+      href="/detail"
+      role="listitem"
+    >
+      <img
+        alt="Rogue Warfare: Death of a Nation"
+        aria-label="Rogue Warfare: Death of a Nation"
+        class="c2"
+        src="https://image.tmdb.org/t/p/w200///8GVpIEBqlRBvx28G0LfEX0U8D2k.jpg"
+      />
+    </a>
+    <a
+      aria-label="Demon Slayer the Movie: Mugen Train"
+      class="c1"
+      href="/detail"
+      role="listitem"
+    >
+      <img
+        alt="Demon Slayer the Movie: Mugen Train"
+        aria-label="Demon Slayer the Movie: Mugen Train"
+        class="c2"
+        src="https://image.tmdb.org/t/p/w200///h8Rb9gBr48ODIwYUttZNYeMWeUU.jpg"
+      />
+    </a>
+    <a
+      aria-label="The SpongeBob Movie: Sponge on the Run"
+      class="c1"
+      href="/detail"
+      role="listitem"
+    >
+      <img
+        alt="The SpongeBob Movie: Sponge on the Run"
+        aria-label="The SpongeBob Movie: Sponge on the Run"
+        class="c2"
+        src="https://image.tmdb.org/t/p/w200///jlJ8nDhMhCYJuzOw3f52CP1W8MW.jpg"
+      />
+    </a>
+    <a
+      aria-label="Ava"
+      class="c1"
+      href="/detail"
+      role="listitem"
+    >
+      <img
+        alt="Ava"
+        aria-label="Ava"
+        class="c2"
+        src="https://image.tmdb.org/t/p/w200///qzA87Wf4jo1h8JMk9GilyIYvwsA.jpg"
+      />
+    </a>
+    <a
+      aria-label="Welcome to Sudden Death"
+      class="c1"
+      href="/detail"
+      role="listitem"
+    >
+      <img
+        alt="Welcome to Sudden Death"
+        aria-label="Welcome to Sudden Death"
+        class="c2"
+        src="https://image.tmdb.org/t/p/w200///elZ6JCzSEvFOq4gNjNeZsnRFsvj.jpg"
+      />
+    </a>
+  </div>
+</DocumentFragment>
+`;

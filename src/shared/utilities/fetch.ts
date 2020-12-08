@@ -13,8 +13,8 @@ const extendedFetch = (
 
   headers.set('Authorization', `Bearer ${token}`);
 
-  return (method: 'GET' | 'POST') => async (apiUrl: string) =>
-    fetchInjected(`${tmdbUrl}/${apiUrl}`, {
+  return (method: 'GET' | 'POST') => async (enpoint: string) =>
+    fetchInjected(`${tmdbUrl}/${enpoint}`, {
       headers,
       method,
     }).then(async response => {
