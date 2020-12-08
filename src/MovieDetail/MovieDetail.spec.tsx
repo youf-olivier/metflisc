@@ -20,7 +20,9 @@ describe('MovieDetail tests suite', () => {
 
   it('should render without crashing', async () => {
     const { asFragment } = render(<MovieDetail />, { wrapper });
-    await waitForElementToBeRemoved(() => screen.getByText(/pending/i));
+    await waitForElementToBeRemoved(() =>
+      screen.getByRole('alert', { name: /loader/i }),
+    );
     expect(asFragment()).toMatchSnapshot();
   });
 });

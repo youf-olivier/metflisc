@@ -5,6 +5,7 @@ import { ThemeProvider } from '@material-ui/core';
 import { useXhr } from 'shared/utilities/fetch';
 import configuration from 'configuration.json';
 import noImage from 'shared/images/noImage.png';
+import Loader from 'shared/components/Loader/Loader';
 import { MovieType } from 'Movie.type';
 import {
   StyledLink,
@@ -86,7 +87,7 @@ const MoviesList: FC<{}> = () => {
       </StyleMoviesContainer>
     </>
   ) : (
-    <span>Pending...</span>
+    <Loader />
   );
 };
 

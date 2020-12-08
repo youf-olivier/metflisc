@@ -24,13 +24,17 @@ describe('MoviesList tests suite', () => {
 
   it('should display list of films when search a movie', async () => {
     render(<MoviesList />, { wrapper });
-    await waitForElementToBeRemoved(() => screen.getByText(/pending/i));
+    await waitForElementToBeRemoved(() =>
+      screen.getByRole('alert', { name: /loader/i }),
+    );
     expect(screen.getAllByRole('listitem')).toHaveLength(20);
     userEvent.type(screen.getByRole('textbox'), 'Babar');
     expect(screen.getAllByRole('listitem')).toHaveLength(20);
     userEvent.type(screen.getByRole('textbox'), '{enter}');
-    screen.getByText(/pending/i);
-    await waitForElementToBeRemoved(() => screen.getByText(/pending/i));
+    screen.getByRole('alert', { name: /loader/i });
+    await waitForElementToBeRemoved(() =>
+      screen.getByRole('alert', { name: /loader/i }),
+    );
     expect(screen.getAllByRole('listitem')).toHaveLength(3);
   });
 });

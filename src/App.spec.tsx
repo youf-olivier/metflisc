@@ -10,19 +10,25 @@ import App from './App';
 describe('App tests suite', () => {
   it('Should render without crashing', async () => {
     const { asFragment } = render(<App />);
-    await waitForElementToBeRemoved(() => screen.getByText(/pending/i));
+    await waitForElementToBeRemoved(() =>
+      screen.getByRole('alert', { name: /loader/i }),
+    );
     expect(asFragment()).toMatchSnapshot();
   });
   it('Should list all movies ', async () => {
     render(<App />);
-    await waitForElementToBeRemoved(() => screen.getByText(/pending/i));
+    await waitForElementToBeRemoved(() =>
+      screen.getByRole('alert', { name: /loader/i }),
+    );
     expect(screen.getAllByRole('listitem')).toHaveLength(20);
   });
   it('Should go to detail when click on a movie', async () => {
     render(<App />);
     const homeHeader = screen.getByRole('heading', { name: /Movie/i });
     expect(homeHeader).toBeInTheDocument();
-    await waitForElementToBeRemoved(() => screen.getByText(/pending/i));
+    await waitForElementToBeRemoved(() =>
+      screen.getByRole('alert', { name: /loader/i }),
+    );
     UserEvent.click(screen.getAllByRole('listitem')[0]);
 
     const detailHeader = screen.getByRole('heading', { name: /Detail/i });
@@ -36,9 +42,13 @@ describe('App tests suite', () => {
     render(<App />);
     const homeHeader = screen.getByRole('heading', { name: /Movie/i });
     expect(homeHeader).toBeInTheDocument();
-    await waitForElementToBeRemoved(() => screen.getByText(/pending/i));
+    await waitForElementToBeRemoved(() =>
+      screen.getByRole('alert', { name: /loader/i }),
+    );
     UserEvent.click(screen.getAllByRole('listitem')[0]);
-    await waitForElementToBeRemoved(() => screen.getByText(/pending/i));
+    await waitForElementToBeRemoved(() =>
+      screen.getByRole('alert', { name: /loader/i }),
+    );
     UserEvent.click(screen.getByRole('link', { name: /back link/ }));
     const homeHeaderbck = screen.getByRole('heading', { name: /Movie/i });
     expect(homeHeaderbck).toBeInTheDocument();

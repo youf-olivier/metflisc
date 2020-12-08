@@ -2,6 +2,7 @@ import { MovieType } from 'Movie.type';
 import { FC, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useXhr } from 'shared/utilities/fetch';
+import Loader from 'shared/components/Loader/Loader';
 import configuration from 'configuration.json';
 import {
   StyledArticle,
@@ -27,7 +28,7 @@ const MovieDetail: FC<{}> = () => {
       <StyledImage src={`${configuration.imageTmdbUrl}/${movie.poster_path}`} />
     </StyledArticle>
   ) : (
-    <span>Pending...</span>
+    <Loader />
   );
 };
 

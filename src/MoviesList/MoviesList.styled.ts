@@ -2,6 +2,7 @@ import { createMuiTheme, TextField } from '@material-ui/core';
 import { grey } from '@material-ui/core/colors';
 import { Link } from 'react-router-dom';
 import { device } from 'shared/utilities/devise.constants';
+
 import styled from 'styled-components';
 
 export const StyleMoviesContainer = styled.div`
