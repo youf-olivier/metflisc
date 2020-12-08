@@ -1,55 +1,18 @@
 import { FC, FormEvent, useCallback, useEffect, useState } from 'react';
-import styled from 'styled-components';
 import { getRoutePath } from 'routes';
-import { Link } from 'react-router-dom';
-import { device } from 'shared/utilities/devise.constants';
-import TextField from '@material-ui/core/TextField';
+import { ThemeProvider } from '@material-ui/core';
 
 import { useXhr } from 'shared/utilities/fetch';
 import configuration from 'configuration.json';
-import { MovieType } from 'Movie.type';
-import { createMuiTheme, ThemeProvider } from '@material-ui/core';
-import { grey } from '@material-ui/core/colors';
 import noImage from 'shared/images/noImage.png';
-
-type MoviesListProps = {};
-
-const StyleMoviesContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0.2em;
-  @media ${device.tablet} {
-    max-width: 950px;
-    margin: auto;
-  }
-`;
-
-const StyledLink = styled(Link)`
-  display: contents;
-`;
-
-const StyleImg = styled.img`
-  width: 48%;
-  margin: 0.2em;
-  @media ${device.tablet} {
-    width: 24%;
-  }
-
-  @media ${device.laptop} {
-    width: 18%;
-  }
-`;
-
-const StyledTextfield = styled(TextField)`
-  background-color: #ffffff;
-  margin-top: 0.5em;
-`;
-
-const theme = createMuiTheme({
-  palette: {
-    primary: grey,
-  },
-});
+import { MovieType } from 'Movie.type';
+import {
+  StyledLink,
+  StyledTextfield,
+  StyleImg,
+  StyleMoviesContainer,
+  theme,
+} from './MoviesList.styled';
 
 const getQuery = (input: string) => {
   const query = encodeURIComponent(input);
@@ -62,7 +25,7 @@ const getImage = (movie: MovieType) => {
     : null;
 };
 
-const MoviesList: FC<MoviesListProps> = () => {
+const MoviesList: FC<{}> = () => {
   const { get, data, status } = useXhr();
   const [moviesList, setMoviesList] = useState<MovieType[]>([]);
   const [searchField, setSearchField] = useState('');

@@ -2,22 +2,7 @@
 
 exports[`App tests suite Should render without crashing 1`] = `
 <DocumentFragment>
-  .c3 {
-  color: #ffffff;
-  vertical-align: middle;
-}
-
-.c2 {
-  display: inline-block;
-  position: absolute;
-  right: 0.5em;
-  top: 50%;
-  -webkit-transform: translate(0,-50%);
-  -ms-transform: translate(0,-50%);
-  transform: translate(0,-50%);
-}
-
-.c1 {
+  .c1 {
   color: #fff;
   font-size: 1.4em;
   font-weight: 500;
@@ -34,6 +19,21 @@ exports[`App tests suite Should render without crashing 1`] = `
   text-align: center;
   position: relative;
   margin-bottom: 0.5em;
+}
+
+.c3 {
+  color: #ffffff;
+  vertical-align: middle;
+}
+
+.c2 {
+  display: inline-block;
+  position: absolute;
+  right: 0.5em;
+  top: 50%;
+  -webkit-transform: translate(0,-50%);
+  -ms-transform: translate(0,-50%);
+  transform: translate(0,-50%);
 }
 
 @media (min-width:768px) {
@@ -206,7 +206,7 @@ exports[`App tests suite Should render without crashing 1`] = `
         alt="Upside-Down Magic"
         aria-label="Upside-Down Magic"
         class="c2"
-        src="https://image.tmdb.org/t/p/w200///xfYMQNApIIh8KhpNVtG1XRz0ZAp.jpg"
+        src="noImage.png"
         title="Upside-Down Magic"
       />
     </a>
