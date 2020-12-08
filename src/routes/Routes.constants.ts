@@ -17,9 +17,9 @@ const routes: RouteType[] = [
   },
   {
     name: 'MovieDetail',
-    path: '/detail',
+    path: '/detail/:id',
     component: MovieDetail,
-    title: 'Détail',
+    title: 'Details',
   },
 ];
 

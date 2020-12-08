@@ -25,7 +25,7 @@ const StyledLink = styled(Link)`
 
 const StyleImg = styled.img`
   width: 48%;
-  margin: 0.1em;
+  margin: 0.2em;
   @media ${device.tablet} {
     width: 24%;
   }
@@ -55,7 +55,7 @@ const MoviesList: FC<MoviesListProps> = () => {
     <StyleMoviesContainer role="list">
       {moviesList?.map((movie: MovieType) => (
         <StyledLink
-          to={getRoutePath('MovieDetail')}
+          to={`${getRoutePath('MovieDetail', movie.id.toString())}`}
           key={movie.id}
           role="listitem"
           aria-label={movie.title}

@@ -14,7 +14,7 @@ describe('Router tests suite', () => {
 
   it('should find route by name', () => {
     expect(getRoutePath('Home')).toEqual('/');
-    expect(getRoutePath('MovieDetail')).toEqual('/detail');
+    expect(getRoutePath('MovieDetail', '1231')).toEqual('/detail/1231');
     expect(getRoutePath('Other')).toEqual('/');
   });
 });

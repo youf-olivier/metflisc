@@ -2,7 +2,7 @@ export type MovieType = {
   id: number;
   title: string;
   overview: string;
-  popularity: number;
+  vote_average: number;
   posterPath: string;
   releaseDate: Date;
   poster_path: string;

@@ -19,6 +19,7 @@ const getTheme = (mode: ThemeType) => ({
   colors: {
     header: mode === 'light' ? '#60A5FA' : '#1F2937',
     background: mode === 'light' ? '#FFFFF' : '#4B5563',
+    font: mode === 'light' ? '#000000' : '#FFFFFF',
   },
 });
 

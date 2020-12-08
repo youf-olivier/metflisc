@@ -115,7 +115,7 @@ exports[`App tests suite Should render without crashing 1`] = `
 
 .c2 {
   width: 48%;
-  margin: 0.1em;
+  margin: 0.2em;
 }
 
 @media (min-width:768px) {
@@ -144,7 +144,7 @@ exports[`App tests suite Should render without crashing 1`] = `
     <a
       aria-label="Jiu Jitsu"
       class="c1"
-      href="/detail"
+      href="/detail/590706"
       role="listitem"
     >
       <img
@@ -157,7 +157,7 @@ exports[`App tests suite Should render without crashing 1`] = `
     <a
       aria-label="Upside-Down Magic"
       class="c1"
-      href="/detail"
+      href="/detail/671583"
       role="listitem"
     >
       <img
@@ -170,7 +170,7 @@ exports[`App tests suite Should render without crashing 1`] = `
     <a
       aria-label="Tenet"
       class="c1"
-      href="/detail"
+      href="/detail/577922"
       role="listitem"
     >
       <img
@@ -183,7 +183,7 @@ exports[`App tests suite Should render without crashing 1`] = `
     <a
       aria-label="Fatman"
       class="c1"
-      href="/detail"
+      href="/detail/602211"
       role="listitem"
     >
       <img
@@ -196,7 +196,7 @@ exports[`App tests suite Should render without crashing 1`] = `
     <a
       aria-label="The Dalton Gang"
       class="c1"
-      href="/detail"
+      href="/detail/729648"
       role="listitem"
     >
       <img
@@ -209,7 +209,7 @@ exports[`App tests suite Should render without crashing 1`] = `
     <a
       aria-label="Joker"
       class="c1"
-      href="/detail"
+      href="/detail/475557"
       role="listitem"
     >
       <img
@@ -222,7 +222,7 @@ exports[`App tests suite Should render without crashing 1`] = `
     <a
       aria-label="Magic Camp"
       class="c1"
-      href="/detail"
+      href="/detail/454433"
       role="listitem"
     >
       <img
@@ -235,7 +235,7 @@ exports[`App tests suite Should render without crashing 1`] = `
     <a
       aria-label="Greenland"
       class="c1"
-      href="/detail"
+      href="/detail/524047"
       role="listitem"
     >
       <img
@@ -248,7 +248,7 @@ exports[`App tests suite Should render without crashing 1`] = `
     <a
       aria-label="Mulan"
       class="c1"
-      href="/detail"
+      href="/detail/337401"
       role="listitem"
     >
       <img
@@ -261,7 +261,7 @@ exports[`App tests suite Should render without crashing 1`] = `
     <a
       aria-label="Hard Kill"
       class="c1"
-      href="/detail"
+      href="/detail/724989"
       role="listitem"
     >
       <img
@@ -274,7 +274,7 @@ exports[`App tests suite Should render without crashing 1`] = `
     <a
       aria-label="The Christmas Chronicles: Part Two"
       class="c1"
-      href="/detail"
+      href="/detail/654028"
       role="listitem"
     >
       <img
@@ -287,7 +287,7 @@ exports[`App tests suite Should render without crashing 1`] = `
     <a
       aria-label="Chick Fight"
       class="c1"
-      href="/detail"
+      href="/detail/682377"
       role="listitem"
     >
       <img
@@ -300,7 +300,7 @@ exports[`App tests suite Should render without crashing 1`] = `
     <a
       aria-label="Peninsula"
       class="c1"
-      href="/detail"
+      href="/detail/581392"
       role="listitem"
     >
       <img
@@ -313,7 +313,7 @@ exports[`App tests suite Should render without crashing 1`] = `
     <a
       aria-label="Roald Dahl's The Witches"
       class="c1"
-      href="/detail"
+      href="/detail/531219"
       role="listitem"
     >
       <img
@@ -326,7 +326,7 @@ exports[`App tests suite Should render without crashing 1`] = `
     <a
       aria-label="Rogue City"
       class="c1"
-      href="/detail"
+      href="/detail/671039"
       role="listitem"
     >
       <img
@@ -339,7 +339,7 @@ exports[`App tests suite Should render without crashing 1`] = `
     <a
       aria-label="Rogue Warfare: Death of a Nation"
       class="c1"
-      href="/detail"
+      href="/detail/635780"
       role="listitem"
     >
       <img
@@ -352,7 +352,7 @@ exports[`App tests suite Should render without crashing 1`] = `
     <a
       aria-label="Demon Slayer the Movie: Mugen Train"
       class="c1"
-      href="/detail"
+      href="/detail/635302"
       role="listitem"
     >
       <img
@@ -365,7 +365,7 @@ exports[`App tests suite Should render without crashing 1`] = `
     <a
       aria-label="The SpongeBob Movie: Sponge on the Run"
       class="c1"
-      href="/detail"
+      href="/detail/400160"
       role="listitem"
     >
       <img
@@ -378,7 +378,7 @@ exports[`App tests suite Should render without crashing 1`] = `
     <a
       aria-label="Ava"
       class="c1"
-      href="/detail"
+      href="/detail/539885"
       role="listitem"
     >
       <img
@@ -391,7 +391,7 @@ exports[`App tests suite Should render without crashing 1`] = `
     <a
       aria-label="Welcome to Sudden Death"
       class="c1"
-      href="/detail"
+      href="/detail/741067"
       role="listitem"
     >
       <img

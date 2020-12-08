@@ -4,25 +4,8 @@ import {
   waitForElementToBeRemoved,
 } from '@testing-library/react';
 import UserEvent from '@testing-library/user-event';
-import { setupServer } from 'msw/node';
-import { rest } from 'msw';
 
-import configuration from 'configuration.json';
-import fixture from './Movies.fixture.json';
 import App from './App';
-
-const server = setupServer(
-  rest.get(
-    `${configuration.tmdbUrl}/${configuration.api.popularEnpoint}`,
-    (req, res, ctx) => {
-      return res(ctx.json(fixture.moviesList));
-    },
-  ),
-);
-
-beforeAll(() => server.listen({ onUnhandledRequest: 'error' }));
-afterAll(() => server.close());
-afterEach(() => server.resetHandlers());
 
 describe('App tests suite', () => {
   it('Should render without crashing', async () => {
@@ -44,7 +27,7 @@ describe('App tests suite', () => {
     await waitForElementToBeRemoved(() => screen.getByText(/pending/i));
     UserEvent.click(screen.getAllByRole('listitem')[0]);
 
-    const detailHeader = screen.getByRole('heading', { name: /Détail/i });
+    const detailHeader = screen.getByRole('heading', { name: /Detail/i });
     expect(
       screen.queryByRole('heading', { name: /Movie/i }),
     ).not.toBeInTheDocument();

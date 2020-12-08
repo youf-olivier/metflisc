@@ -7,8 +7,12 @@ type GenericLayoutProps = {
   route: RouteType;
 };
 
-export const getRoutePath = (name: string) =>
-  routes.find(p => p.name === name)?.path || '/';
+export const getRoutePath = (name: string, param?: string) => {
+  const regex = /(\/:)\w+/g;
+  let path = routes.find(p => p.name === name)?.path || '/';
+  path = param ? path.replace(regex, `/${param}`) : path;
+  return path;
+};
 
 const GenericLayout = ({ route }: GenericLayoutProps) => (
   <>
