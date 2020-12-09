@@ -40,11 +40,11 @@ describe('App tests suite', () => {
 
   it('Should back to home when click on back button', async () => {
     render(<App />);
-    const homeHeader = screen.getByRole('heading', { name: /Movie/i });
-    expect(homeHeader).toBeInTheDocument();
     await waitForElementToBeRemoved(() =>
       screen.getByRole('alert', { name: /loader/i }),
     );
+    const homeHeader = screen.getByRole('heading', { name: /Movie/i });
+    expect(homeHeader).toBeInTheDocument();
     UserEvent.click(screen.getAllByRole('listitem')[0]);
     await waitForElementToBeRemoved(() =>
       screen.getByRole('alert', { name: /loader/i }),

@@ -2,6 +2,7 @@ import {
   render,
   screen,
   waitForElementToBeRemoved,
+  waitFor,
 } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { FC } from 'react';
@@ -28,13 +29,31 @@ describe('MoviesList tests suite', () => {
       screen.getByRole('alert', { name: /loader/i }),
     );
     expect(screen.getAllByRole('listitem')).toHaveLength(20);
-    userEvent.type(screen.getByRole('textbox'), 'Babar');
-    expect(screen.getAllByRole('listitem')).toHaveLength(20);
-    userEvent.type(screen.getByRole('textbox'), '{enter}');
+
+    userEvent.type(screen.getByRole('textbox'), 'babar');
     screen.getByRole('alert', { name: /loader/i });
+    await waitFor(() =>
+      expect(screen.getAllByRole('listitem')).toHaveLength(3),
+    );
+  });
+
+  it('should reset search and field when click on clear button ', async () => {
+    render(<MoviesList />, { wrapper });
     await waitForElementToBeRemoved(() =>
       screen.getByRole('alert', { name: /loader/i }),
     );
-    expect(screen.getAllByRole('listitem')).toHaveLength(3);
+    expect(screen.getAllByRole('listitem')).toHaveLength(20);
+    userEvent.type(screen.getByRole('textbox'), 'babar');
+    screen.getByRole('alert', { name: /loader/i });
+
+    await waitFor(() =>
+      expect(screen.getAllByRole('listitem')).toHaveLength(3),
+    );
+
+    userEvent.click(screen.getByRole('button', { name: /clear search/i }));
+
+    await waitFor(() =>
+      expect(screen.getAllByRole('listitem')).toHaveLength(20),
+    );
   });
 });

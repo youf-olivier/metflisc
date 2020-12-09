@@ -1,6 +1,7 @@
-import { FC, FormEvent, useCallback, useEffect, useState } from 'react';
+import { ChangeEvent, FC, useCallback, useEffect, useState } from 'react';
 import { getRoutePath } from 'routes';
-import { ThemeProvider } from '@material-ui/core';
+import { IconButton, ThemeProvider } from '@material-ui/core';
+import ClearIcon from '@material-ui/icons/Clear';
 
 import { useXhr } from 'shared/utilities/fetch';
 import configuration from 'configuration.json';
@@ -26,13 +27,37 @@ const getImage = (movie: MovieType) => {
     : null;
 };
 
+const ResultList: FC<{ moviesList: MovieType[] }> = ({ moviesList }) => (
+  <StyleMoviesContainer role="list">
+    {moviesList?.map((movie: MovieType) => (
+      <StyledLink
+        to={`${getRoutePath('MovieDetail', movie.id.toString())}`}
+        key={movie.id}
+        role="listitem"
+        aria-label={movie.title}
+      >
+        <StyleImg
+          src={movie.poster_path || noImage}
+          alt={movie.title}
+          title={movie.title}
+          aria-label={movie.title}
+        />
+      </StyledLink>
+    ))}
+  </StyleMoviesContainer>
+);
+
 const MoviesList: FC<{}> = () => {
   const { get, data, status } = useXhr();
+  const [value, setValue] = useState('');
   const [moviesList, setMoviesList] = useState<MovieType[]>([]);
-  const [searchField, setSearchField] = useState('');
   useEffect(() => {
-    get(configuration.api.popularEnpoint);
-  }, [get]);
+    if (value.length >= 2) {
+      get(getQuery(value));
+    } else if (value.length === 0) {
+      get(configuration.api.popularEnpoint);
+    }
+  }, [get, value]);
 
   useEffect(() => {
     setMoviesList(
@@ -43,51 +68,52 @@ const MoviesList: FC<{}> = () => {
     );
   }, [data]);
 
-  const onChange = useCallback(e => {
-    setSearchField(e.target.value);
+  useEffect(() => {
+    get(configuration.api.popularEnpoint);
+  }, [get]);
+
+  const onClear = useCallback(() => {
+    setValue('');
   }, []);
 
-  const search = useCallback(
-    (e: FormEvent<HTMLFormElement>) => {
-      e.preventDefault();
-      get(getQuery(searchField));
+  const onChange = useCallback(
+    (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+      setValue(e.target.value);
     },
-    [get, searchField],
+    [],
   );
 
-  return status === 'RESOLVED' ? (
+  return (
     <>
-      <form onSubmit={search}>
-        <ThemeProvider theme={theme}>
-          <StyledTextfield
-            label="Search a movie"
-            fullWidth
-            variant="filled"
-            name="searchField"
-            onChange={onChange}
-          />
-        </ThemeProvider>
-      </form>
-      <StyleMoviesContainer role="list">
-        {moviesList?.map((movie: MovieType) => (
-          <StyledLink
-            to={`${getRoutePath('MovieDetail', movie.id.toString())}`}
-            key={movie.id}
-            role="listitem"
-            aria-label={movie.title}
-          >
-            <StyleImg
-              src={movie.poster_path || noImage}
-              alt={movie.title}
-              title={movie.title}
-              aria-label={movie.title}
-            />
-          </StyledLink>
-        ))}
-      </StyleMoviesContainer>
+      <ThemeProvider theme={theme}>
+        <StyledTextfield
+          label="Search a movie"
+          fullWidth
+          variant="filled"
+          name="searchField"
+          value={value}
+          onChange={onChange}
+          InputProps={{
+            endAdornment: (
+              <IconButton
+                aria-label="clear search"
+                onClick={onClear}
+                onMouseDown={onClear}
+                edge="end"
+              >
+                <ClearIcon />
+              </IconButton>
+            ),
+          }}
+        />
+      </ThemeProvider>
+
+      {status === 'RESOLVED' ? (
+        <ResultList moviesList={moviesList} />
+      ) : (
+        <Loader />
+      )}
     </>
-  ) : (
-    <Loader />
   );
 };
 

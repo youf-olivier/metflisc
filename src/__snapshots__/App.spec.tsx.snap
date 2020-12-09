@@ -116,29 +116,51 @@ exports[`App tests suite Should render without crashing 1`] = `
 
 }
 
-<form>
-    <div
-      class="MuiFormControl-root MuiTextField-root c0 MuiFormControl-fullWidth"
+<div
+    class="MuiFormControl-root MuiTextField-root c0 MuiFormControl-fullWidth"
+  >
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled"
+      data-shrink="false"
     >
-      <label
-        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled"
-        data-shrink="false"
+      Search a movie
+    </label>
+    <div
+      class="MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiFilledInput-adornedEnd"
+    >
+      <input
+        aria-invalid="false"
+        class="MuiInputBase-input MuiFilledInput-input MuiInputBase-inputAdornedEnd MuiFilledInput-inputAdornedEnd"
+        name="searchField"
+        type="text"
+        value=""
+      />
+      <button
+        aria-label="clear search"
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd"
+        tabindex="0"
+        type="button"
       >
-        Search a movie
-      </label>
-      <div
-        class="MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-fullWidth MuiInputBase-formControl"
-      >
-        <input
-          aria-invalid="false"
-          class="MuiInputBase-input MuiFilledInput-input"
-          name="searchField"
-          type="text"
-          value=""
+        <span
+          class="MuiIconButton-label"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+            />
+          </svg>
+        </span>
+        <span
+          class="MuiTouchRipple-root"
         />
-      </div>
+      </button>
     </div>
-  </form>
+  </div>
   .c0 {
   display: -webkit-box;
   display: -webkit-flex;
