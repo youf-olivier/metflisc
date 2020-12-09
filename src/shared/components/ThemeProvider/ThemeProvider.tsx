@@ -2,9 +2,14 @@ import { createContext, FC, useCallback, useEffect, useState } from 'react';
 import {
   createGlobalStyle,
   ThemeProvider as StyledThemeProvider,
+  DefaultTheme as ThemeType,
 } from 'styled-components';
 
-export type ThemeType = 'light' | 'dark';
+export type ModeType = 'light' | 'dark';
+type ContextType = {
+  theme: ModeType;
+  toggleTheme: () => void;
+};
 
 const Global = createGlobalStyle`
 body {
@@ -15,31 +20,29 @@ body {
   margin:0
 }`;
 
-const getTheme = (mode: ThemeType) => ({
-  colors: {
-    header: mode === 'light' ? '#60A5FA' : '#1F2937',
-    background: mode === 'light' ? '#FFFFF' : '#4B5563',
-    font: mode === 'light' ? '#000000' : '#FFFFFF',
-  },
-});
-
-type ContextType = {
-  theme: ThemeType;
-  toggleTheme: () => void;
+const themeLight: ThemeType = {
+  colors: { header: '#60A5FA', background: '#FFFFFF', font: '#000000' },
 };
+
+const themeDark: ThemeType = {
+  colors: { header: '#1F2937', background: '#4B5563', font: '#FFFFFF' },
+};
+
+const themes = { light: themeLight, dark: themeDark };
+const getTheme = (mode: ModeType) => themes[mode] ?? themeLight;
 
 export const ThemeContext = createContext<ContextType>({
   theme: 'dark',
   toggleTheme: () => {},
 });
 
-const getInitialTheme = (): ThemeType => {
-  const savedTheme = localStorage.getItem('theme') as ThemeType;
+const getInitialTheme = (): ModeType => {
+  const savedTheme = localStorage.getItem('theme') as ModeType;
   return savedTheme ?? 'light';
 };
 
 const ThemeProvider: FC = ({ children }) => {
-  const [theme, setTheme] = useState<ThemeType>(getInitialTheme);
+  const [theme, setTheme] = useState<ModeType>(getInitialTheme);
 
   useEffect(() => {
     localStorage.setItem('theme', theme);
@@ -47,7 +50,7 @@ const ThemeProvider: FC = ({ children }) => {
 
   const toggleTheme = useCallback(
     () =>
-      setTheme((prevTheme: ThemeType) =>
+      setTheme((prevTheme: ModeType) =>
         prevTheme === 'light' ? 'dark' : 'light',
       ),
     [],

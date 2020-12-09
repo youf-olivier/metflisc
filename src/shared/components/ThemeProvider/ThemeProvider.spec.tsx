@@ -34,7 +34,7 @@ describe('ThemeProvider tests suite', () => {
     render(<AppTest />, { wrapper });
     const styleddiv = screen.getByTestId('styleddiv');
     expect(styleddiv).toHaveStyleRule('background-color', '#60A5FA');
-    expect(styleddiv).toHaveStyleRule('color', '#FFFFF');
+    expect(styleddiv).toHaveStyleRule('color', '#FFFFFF');
   });
 
   it('should apply global theme with dark mode', () => {
@@ -59,7 +59,7 @@ describe('ThemeProvider tests suite', () => {
     render(<AppTest />, { wrapper });
     const styleddiv0 = screen.getByTestId('styleddiv');
     expect(styleddiv0).toHaveStyleRule('background-color', '#60A5FA');
-    expect(styleddiv0).toHaveStyleRule('color', '#FFFFF');
+    expect(styleddiv0).toHaveStyleRule('color', '#FFFFFF');
     userEvent.click(screen.getByText(/toggle theme/i));
     const styleddiv = screen.getByTestId('styleddiv');
     expect(styleddiv).toHaveStyleRule('background-color', '#1F2937');
@@ -67,6 +67,6 @@ describe('ThemeProvider tests suite', () => {
     userEvent.click(screen.getByText(/toggle theme/i));
     const styleddiv2 = screen.getByTestId('styleddiv');
     expect(styleddiv2).toHaveStyleRule('background-color', '#60A5FA');
-    expect(styleddiv2).toHaveStyleRule('color', '#FFFFF');
+    expect(styleddiv2).toHaveStyleRule('color', '#FFFFFF');
   });
 });
