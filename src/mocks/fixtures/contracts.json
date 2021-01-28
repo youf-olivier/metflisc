@@ -1,0 +1,22 @@
+{
+  "0159475196": [
+    {
+      "numeroContrat": "0000063003876504",
+      "dateDEffet": "0001-01-01T00:00:00",
+      "codePortfolio": "",
+      "codeProduit": "02584",
+      "nomProduit": "02584",
+      "nomCategorie": "",
+      "statut": "1"
+    },
+    {
+      "numeroContrat": "0000063003876604",
+      "dateDEffet": "0001-01-01T00:00:00",
+      "codePortfolio": "",
+      "codeProduit": "02674",
+      "nomProduit": "02674",
+      "nomCategorie": "",
+      "statut": "1"
+    }
+  ]
+}

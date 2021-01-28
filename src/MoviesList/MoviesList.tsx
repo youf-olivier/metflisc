@@ -47,7 +47,7 @@ const ResultList: FC<{ moviesList: MovieType[] }> = ({ moviesList }) => (
   </StyleMoviesContainer>
 );
 
-const MoviesList: FC<{}> = () => {
+const MoviesList: FC = () => {
   const { get, data, status } = useXhr();
   const [value, setValue] = useState('');
   const [moviesList, setMoviesList] = useState<MovieType[]>([]);
